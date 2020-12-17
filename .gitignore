@@ -20,6 +20,7 @@
 tmp/
 *.tmp
 
+web/node_modules/
 .devcontainer
 *.conf
 web/src/Conf.js
