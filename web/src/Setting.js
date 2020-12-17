@@ -6,7 +6,7 @@ export let ClientUrl = '';
 export function initFullClientUrl() {
     const hostname = window.location.hostname;
     if (hostname === 'localhost') {
-        ClientUrl = `http://${hostname}:3030`;
+        ClientUrl = `http://${hostname}:3000`;
     } else {
         ClientUrl = `https://${hostname}`;
     }

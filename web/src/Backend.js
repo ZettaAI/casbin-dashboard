@@ -3,9 +3,9 @@ export let ServerUrl = '';
 export function initServerUrl() {
     const hostname = window.location.hostname;
     if (hostname === 'localhost') {
-        ServerUrl = `http://${hostname}:8000`;
+        ServerUrl = `http://${hostname}:8008`;
     } else {
-        ServerUrl = `https://${hostname}`;
+        ServerUrl = `http://casbin-backend:8008`;
     }
 }
 
@@ -243,6 +243,7 @@ export function logout() {
 }
 
 export function githubLogin(code, state, redirectUrl, addition) {
+    console.log(redirectUrl);
     return fetch(`${ServerUrl}/api/v1/auth-github?code=${code}&state=${state}&redirect_url=${redirectUrl}&addition=${addition}`, {
         method: 'GET',
         credentials: 'include',
