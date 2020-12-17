@@ -2,11 +2,12 @@ export let ServerUrl = '';
 
 export function initServerUrl() {
     const hostname = window.location.hostname;
-    if (hostname === 'localhost') {
-        ServerUrl = `http://${hostname}:8008`;
-    } else {
-        ServerUrl = `http://casbin-backend:8008`;
-    }
+    ServerUrl = `http://localhost:8008`;
+    // if (hostname === 'localhost') {
+    //     ServerUrl = `http://${hostname}:8008`;
+    // } else {
+    //     ServerUrl = `http://casbin-backend:8008`;
+    // }
 }
 
 export function getAdapters() {
