@@ -22,3 +22,4 @@ tmp/
 
 .devcontainer
 *.conf
+web/src/Conf.js
