@@ -1,13 +1,14 @@
+import * as Conf from "./Conf"
+
 export let ServerUrl = '';
 
 export function initServerUrl() {
     const hostname = window.location.hostname;
     ServerUrl = `http://localhost:8008`;
-    // if (hostname === 'localhost') {
-    //     ServerUrl = `http://${hostname}:8008`;
-    // } else {
-    //     ServerUrl = `http://casbin-backend:8008`;
-    // }
+    if (hostname !== 'localhost') {
+        ServerUrl = Conf.BackendUrl;
+    }
+    console.log(ServerUrl);
 }
 
 export function getAdapters() {
