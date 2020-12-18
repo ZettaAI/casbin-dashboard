@@ -14,6 +14,5 @@ RUN apt-get update \
     && cd web \
     && source ~/.bashrc \
     && npm install \
-    && npm install -g serve \
     && npm run build \
     && rm -rf node_modules/
