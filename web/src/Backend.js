@@ -4,9 +4,10 @@ export let ServerUrl = '';
 
 export function initServerUrl() {
     const hostname = window.location.hostname;
-    ServerUrl = `http://localhost:8008`;
-    if (hostname !== 'localhost') {
-        ServerUrl = Conf.BackendUrl;
+    if (hostname === 'localhost') {
+        ServerUrl = `http://${hostname}:8008`;
+    } else {
+        ServerUrl = `https://${hostname}`;
     }
     console.log(ServerUrl);
 }

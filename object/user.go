@@ -109,6 +109,10 @@ func LinkUserAccount(Github, Email, Avatar string, IsAdmin bool) bool {
 		Avatar:  Avatar,
 		IsAdmin: IsAdmin,
 	}
+	u := GetUser(Github)
+	if u != nil {
+		return false
+	}
 	affected, err := ormManager.engine.Table(new(User)).Insert(user)
 	if err != nil {
 		beego.Error(err)
